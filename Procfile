@@ -1,1 +1,1 @@
-web: ./procfile.sh
+web: gunicorn application:app
