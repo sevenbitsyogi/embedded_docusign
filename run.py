@@ -11,5 +11,5 @@ if (os.environ.get("DEBUG", False) == "True"):
 
     #app.run(debug=True)
 else:
-    app.run(port=5000,debug=True)
+    app.run(debug=True)
 
