@@ -5,18 +5,8 @@ from flask_oauthlib.client import OAuth
 from datetime import datetime, timedelta
 import requests
 import uuid
-from app import app, ds_config, eg001_embedded_signing, \
-            eg002_signing_via_email, eg003_list_envelopes, \
-            eg004_envelope_info, eg005_envelope_recipients, \
-            eg006_envelope_docs, eg007_envelope_get_doc, \
-            eg008_create_template, eg009_use_template, \
-            eg010_send_binary_docs, eg011_embedded_sending, \
-            eg012_embedded_console, eg013_add_doc_to_template, \
-            eg014_collect_payment, eg015_envelope_tab_data, \
-            eg016_set_tab_values, eg017_set_template_tab_values, \
-            eg018_envelope_custom_field_data, eg019_access_code_authentication, \
-            eg020_sms_authentication, eg021_phone_authentication, \
-            eg022_kba_authentication, eg023_idv_authentication
+from app import app, eg002_signing_via_email, eg011_embedded_sending,ds_config
+            
 
 
 @app.route("/")
@@ -44,44 +34,44 @@ def eg002():
     return eg002_signing_via_email.controller()
 
 
-@app.route("/eg003", methods=["GET", "POST"])
-def eg003():
-    return eg003_list_envelopes.controller()
+# @app.route("/eg003", methods=["GET", "POST"])
+# def eg003():
+#     return eg003_list_envelopes.controller()
 
 
-@app.route("/eg004", methods=["GET", "POST"])
-def eg004():
-    return eg004_envelope_info.controller()
+# @app.route("/eg004", methods=["GET", "POST"])
+# def eg004():
+#     return eg004_envelope_info.controller()
 
 
-@app.route("/eg005", methods=["GET", "POST"])
-def eg005():
-    return eg005_envelope_recipients.controller()
+# @app.route("/eg005", methods=["GET", "POST"])
+# def eg005():
+#     return eg005_envelope_recipients.controller()
 
 
-@app.route("/eg006", methods=["GET", "POST"])
-def eg006():
-    return eg006_envelope_docs.controller()
+# @app.route("/eg006", methods=["GET", "POST"])
+# def eg006():
+#     return eg006_envelope_docs.controller()
 
 
-@app.route("/eg007", methods=["GET", "POST"])
-def eg007():
-    return eg007_envelope_get_doc.controller()
+# @app.route("/eg007", methods=["GET", "POST"])
+# def eg007():
+#     return eg007_envelope_get_doc.controller()
 
 
-@app.route("/eg008", methods=["GET", "POST"])
-def eg008():
-    return eg008_create_template.controller()
+# @app.route("/eg008", methods=["GET", "POST"])
+# def eg008():
+#     return eg008_create_template.controller()
 
 
-@app.route("/eg009", methods=["GET", "POST"])
-def eg009():
-    return eg009_use_template.controller()
+# @app.route("/eg009", methods=["GET", "POST"])
+# def eg009():
+#     return eg009_use_template.controller()
 
 
-@app.route("/eg010", methods=["GET", "POST"])
-def eg010():
-    return eg010_send_binary_docs.controller()
+# @app.route("/eg010", methods=["GET", "POST"])
+# def eg010():
+#     return eg010_send_binary_docs.controller()
 
 
 @app.route("/eg011", methods=["GET", "POST"])
@@ -89,64 +79,64 @@ def eg011():
     return eg011_embedded_sending.controller()
 
 
-@app.route("/eg012", methods=["GET", "POST"])
-def eg012():
-    return eg012_embedded_console.controller()
+# @app.route("/eg012", methods=["GET", "POST"])
+# def eg012():
+#     return eg012_embedded_console.controller()
 
 
-@app.route("/eg013", methods=["GET", "POST"])
-def eg013():
-    return eg013_add_doc_to_template.controller()
+# @app.route("/eg013", methods=["GET", "POST"])
+# def eg013():
+#     return eg013_add_doc_to_template.controller()
 
 
-@app.route("/eg014", methods=["GET", "POST"])
-def eg014():
-    return eg014_collect_payment.controller()
+# @app.route("/eg014", methods=["GET", "POST"])
+# def eg014():
+#     return eg014_collect_payment.controller()
 
 
-@app.route("/eg015", methods=["GET", "POST"])
-def eg015():
-    return eg015_envelope_tab_data.controller()
+# @app.route("/eg015", methods=["GET", "POST"])
+# def eg015():
+#     return eg015_envelope_tab_data.controller()
 
 
-@app.route("/eg016", methods=["GET", "POST"])
-def eg016():
-    return eg016_set_tab_values.controller()
+# @app.route("/eg016", methods=["GET", "POST"])
+# def eg016():
+#     return eg016_set_tab_values.controller()
 
 
-@app.route("/eg017", methods=["GET", "POST"])
-def eg017():
-    return eg017_set_template_tab_values.controller()
+# @app.route("/eg017", methods=["GET", "POST"])
+# def eg017():
+#     return eg017_set_template_tab_values.controller()
 
 
-@app.route("/eg018", methods=["GET", "POST"])
-def eg018():
-    return eg018_envelope_custom_field_data.controller()
+# @app.route("/eg018", methods=["GET", "POST"])
+# def eg018():
+#     return eg018_envelope_custom_field_data.controller()
 
 
-@app.route("/eg019", methods=["GET", "POST"])
-def eg019():
-    return eg019_access_code_authentication.controller()
+# @app.route("/eg019", methods=["GET", "POST"])
+# def eg019():
+#     return eg019_access_code_authentication.controller()
 
 
-@app.route("/eg020", methods=["GET", "POST"])
-def eg020():
-    return eg020_sms_authentication.controller()
+# @app.route("/eg020", methods=["GET", "POST"])
+# def eg020():
+#     return eg020_sms_authentication.controller()
 
 
-@app.route("/eg021", methods=["GET", "POST"])
-def eg021():
-    return eg021_phone_authentication.controller()
+# @app.route("/eg021", methods=["GET", "POST"])
+# def eg021():
+#     return eg021_phone_authentication.controller()
 
 
-@app.route("/eg022", methods=["GET", "POST"])
-def eg022():
-    return eg022_kba_authentication.controller()
+# @app.route("/eg022", methods=["GET", "POST"])
+# def eg022():
+#     return eg022_kba_authentication.controller()
 
 
-@app.route("/eg023", methods=["GET", "POST"])
-def eg023():
-    return eg023_idv_authentication.controller()
+# @app.route("/eg023", methods=["GET", "POST"])
+# def eg023():
+#     return eg023_idv_authentication.controller()
 
 
 @app.route("/ds_return")
@@ -173,10 +163,9 @@ def ds_token_ok(buffer_min=60):
     :param buffer_min: buffer time needed in minutes
     :return: true iff the user has an access token that will be good for another buffer min
     """
-    token="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTU3NDgzNDE1OSwiZXhwIjoxNTc0ODYyOTU5LCJVc2VySWQiOiI1MzUyYzYwMi05MDdjLTQ4NzktYTQ1Mi05NjQ3MGJjOWZkMjciLCJzaXRlaWQiOjEsInNjcCI6WyJzaWduYXR1cmUiLCJjbGljay5tYW5hZ2UiLCJvcmdhbml6YXRpb25fcmVhZCIsImdyb3VwX3JlYWQiLCJwZXJtaXNzaW9uX3JlYWQiLCJ1c2VyX3JlYWQiLCJ1c2VyX3dyaXRlIiwiYWNjb3VudF9yZWFkIiwiZG9tYWluX3JlYWQiLCJpZGVudGl0eV9wcm92aWRlcl9yZWFkIiwiZHRyLnJvb21zLnJlYWQiLCJkdHIucm9vbXMud3JpdGUiLCJkdHIuZG9jdW1lbnRzLnJlYWQiLCJkdHIuZG9jdW1lbnRzLndyaXRlIiwiZHRyLnByb2ZpbGUucmVhZCIsImR0ci5wcm9maWxlLndyaXRlIiwiZHRyLmNvbXBhbnkucmVhZCIsImR0ci5jb21wYW55LndyaXRlIl0sImF1ZCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImF6cCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImlzcyI6Imh0dHBzOi8vYWNjb3VudC1kLmRvY3VzaWduLmNvbS8iLCJzdWIiOiI1MzUyYzYwMi05MDdjLTQ4NzktYTQ1Mi05NjQ3MGJjOWZkMjciLCJhdXRoX3RpbWUiOjE1NzQ4MzM2MTYsInB3aWQiOiIwY2VmOTVlZC03MGU1LTRjZTgtOWM3Ny0wNzU3MTNmMWQwOTUifQ.szC5or79bQbFmq8i0OO8j4KIYZd0zIc9CYsMdpxM2mlX7xqQzVNO5xInauqTINUtsllXWDiHprPOpX0I8FWiF0X7sG8suS5v2dKuLpvjobLhbIyxPSL8tl2Vv13i3Co3VcJVARaQ2bCMET10hDcaqy_L0OqcON1e8hUUk_lgESqvglhucs7Z_CBUrt_fSJv1tz7DHtTeIHISvqLvzF4phC-ZDj_lw6zHrr-RFQE-fhg-ccPYYdqLEEVpCACxVBnzVYodvKZ_LX1FBckd72Bh6hydplTIPN4-n_x3ZE4jLt2lKqBbOB-LUaAKFLjlt6t-YuiE-VRb43n0v0oSgmWgDw"
-    session['ds_access_token']=token
+    #token="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjY4MTg1ZmYxLTRlNTEtNGNlOS1hZjFjLTY4OTgxMjIwMzMxNyJ9.eyJUb2tlblR5cGUiOjUsIklzc3VlSW5zdGFudCI6MTU3NDgzNDE1OSwiZXhwIjoxNTc0ODYyOTU5LCJVc2VySWQiOiI1MzUyYzYwMi05MDdjLTQ4NzktYTQ1Mi05NjQ3MGJjOWZkMjciLCJzaXRlaWQiOjEsInNjcCI6WyJzaWduYXR1cmUiLCJjbGljay5tYW5hZ2UiLCJvcmdhbml6YXRpb25fcmVhZCIsImdyb3VwX3JlYWQiLCJwZXJtaXNzaW9uX3JlYWQiLCJ1c2VyX3JlYWQiLCJ1c2VyX3dyaXRlIiwiYWNjb3VudF9yZWFkIiwiZG9tYWluX3JlYWQiLCJpZGVudGl0eV9wcm92aWRlcl9yZWFkIiwiZHRyLnJvb21zLnJlYWQiLCJkdHIucm9vbXMud3JpdGUiLCJkdHIuZG9jdW1lbnRzLnJlYWQiLCJkdHIuZG9jdW1lbnRzLndyaXRlIiwiZHRyLnByb2ZpbGUucmVhZCIsImR0ci5wcm9maWxlLndyaXRlIiwiZHRyLmNvbXBhbnkucmVhZCIsImR0ci5jb21wYW55LndyaXRlIl0sImF1ZCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImF6cCI6ImYwZjI3ZjBlLTg1N2QtNGE3MS1hNGRhLTMyY2VjYWUzYTk3OCIsImlzcyI6Imh0dHBzOi8vYWNjb3VudC1kLmRvY3VzaWduLmNvbS8iLCJzdWIiOiI1MzUyYzYwMi05MDdjLTQ4NzktYTQ1Mi05NjQ3MGJjOWZkMjciLCJhdXRoX3RpbWUiOjE1NzQ4MzM2MTYsInB3aWQiOiIwY2VmOTVlZC03MGU1LTRjZTgtOWM3Ny0wNzU3MTNmMWQwOTUifQ.szC5or79bQbFmq8i0OO8j4KIYZd0zIc9CYsMdpxM2mlX7xqQzVNO5xInauqTINUtsllXWDiHprPOpX0I8FWiF0X7sG8suS5v2dKuLpvjobLhbIyxPSL8tl2Vv13i3Co3VcJVARaQ2bCMET10hDcaqy_L0OqcON1e8hUUk_lgESqvglhucs7Z_CBUrt_fSJv1tz7DHtTeIHISvqLvzF4phC-ZDj_lw6zHrr-RFQE-fhg-ccPYYdqLEEVpCACxVBnzVYodvKZ_LX1FBckd72Bh6hydplTIPN4-n_x3ZE4jLt2lKqBbOB-LUaAKFLjlt6t-YuiE-VRb43n0v0oSgmWgDw"
+    #session['ds_access_token']=token
     ok = "ds_access_token" in session and "ds_expiration" in session
-    print("Ok")
     print(ok)
     ok = ok and (session["ds_expiration"] - timedelta(minutes=buffer_min)) > datetime.utcnow()
     return ok

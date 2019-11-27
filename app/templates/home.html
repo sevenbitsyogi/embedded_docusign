@@ -17,15 +17,15 @@
     -->
 
     <div id="index-page">
-        <h2>Welcome</h2>
+        <!-- <h2>Welcome</h2>
         <p>This launcher both demonstrates use of the OAuth Authorization Code Grant flow and includes multiple 
-            usage examples for the DocuSign eSignature REST API.</p>
+            usage examples for the DocuSign eSignature REST API.</p> -->
 
         {% if show_doc %}
             <p><a target='_blank' href='{{ documentation | safe }}'>Documentation</a> on using OAuth Authorization Code Grant from a 
                 Python Flask application.</p>
         {% endif %}
-
+<!-- 
         <h2>Basic Examples</h2>
 
         <h4 id="example001">1. <a href="eg001">Embedded Signing Ceremony</a></h4>
@@ -107,12 +107,13 @@
         <p>API method used: 
             <a target ='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
         </p>
-
-        <h4 id="example011">11. <a href="eg011">Embedded sending</a></h4>
+ -->
+        <h4 id="example011"><a href="eg011">Embedded sending</a></h4>
         <p>An envelope will be created in draft mode. The DocuSign
             web tool (NDSE) will then be shown, enabling further updates
             to the envelope before it is sent.
         </p>
+<!--         
         <p>API methods used: 
             <a target='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>,
             <a target='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/EnvelopeViews/createSender">EnvelopeViews::createSender</a>.
@@ -229,7 +230,7 @@
         <p>
             API method used:
             <a target='_blank' href="https://developers.docusign.com/esign-rest-api/reference/Envelopes/Envelopes/create">Envelopes::create</a>.
-        </p>
+        </p> -->
 
     </div>
 

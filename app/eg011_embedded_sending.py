@@ -13,12 +13,10 @@ eg = "eg011"  # reference (and url) for this example
 def controller():
     """Controller router using the HTTP method"""
     if request.method == "GET":
-        print("A")
         return get_controller()
     elif request.method == "POST":
         return create_controller()
     else:
-        print("B")
         return render_template("404.html"), 404
 
 
@@ -64,11 +62,8 @@ def create_controller():
             error_body_json = err and hasattr(err, "body") and err.body
             # we can pull the DocuSign error code and message from the response body
             error_body = json.loads(error_body_json)
-            print("D")
             error_code = error_body and "errorCode" in error_body and error_body["errorCode"]
-            print("E")
             error_message = error_body and "message" in error_body and error_body["message"]
-            print("f")
             # In production, may want to provide customized error messages and
             # remediation advice to the user.
             return render_template("error.html",
@@ -137,7 +132,6 @@ def get_controller():
     """responds with the form for the example"""
 
     if views.ds_token_ok():
-        print("JK")
         return render_template("eg011_embedded_sending.html",
                                title="Embedded Sending",
                                source_file=path.basename(__file__),
@@ -149,7 +143,6 @@ def get_controller():
                                )
     else:
         # Save the current operation so it will be resumed after authentication
-        print("LP")
         session["eg"] = url_for(eg)
         print(session["eg"])
         return redirect(url_for("ds_must_authenticate"))
