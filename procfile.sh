@@ -1,4 +1,4 @@
-#!/bin/sh
+ #!/bin/sh
 
 if [ "$DEBUG" = "True" ]; then
         FLASK_ENV="development"
